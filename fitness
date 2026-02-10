@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bela Irina - Transformare în 90 de Zile Fără Dureri și Diete Extreme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #d4a574;
+            --accent-dark: #b88a5e;
+            --light: #f8f6f3;
+            --white: #ffffff;
+            --text: #2c2c2c;
+            --text-light: #666666;
+            --border: #e0ddd8;
+            --error: #c84b31;
+            --success: #2d6a4f;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d2d2d 100%);
+            color: var(--white);
+            padding: 120px 20px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(212,165,116,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-eyebrow {
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            margin-bottom: 30px;
+            color: var(--white);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(18px, 2.5vw, 24px);
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.9);
+            font-weight: 400;
+        }
+        
+        .hero-cta {
+            display: inline-block;
+            padding: 20px 50px;
+            background: var(--accent);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(212,165,116,0.3);
+        }
+        
+        .hero-cta:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(212,165,116,0.4);
+        }
+        
+        /* Pain Points Section */
+        .pain-section {
+            background: var(--light);
+            padding: 100px 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-eyebrow {
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .section-title {
+            font-size: clamp(36px, 5vw, 54px);
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+        
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pain-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .pain-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .pain-card p {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+        
+        /* Story Section */
+        .story-section {
+            padding: 100px 20px;
+            background: var(--white);
+        }
+        
+        .story-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .story-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(24px, 3vw, 36px);
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px;
+            background: var(--light);
+            border-left: 6px solid var(--accent);
+            margin: 40px 0;
+        }
+        
+        /* Before/After Section */
+        .transformation-section {
+            background: var(--primary);
+            color: var(--white);
+            padding: 100px 20px;
+        }
+        
+        .transformation-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .transformation-header .section-title {
+            color: var(--white);
+        }
+        
+        .transformation-placeholder {
+            background: rgba(255,255,255,0.1);
+            border: 2px dashed rgba(212,165,116,0.5);
+            padding: 80px 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .transformation-placeholder h3 {
+            font-size: 24px;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .transformation-placeholder p {
+            color: rgba(255,255,255,0.7);
+            font-size: 16px;
+        }
+        
+        /* Differentiation Section */
+        .diff-section {
+            padding: 100px 20px;
+            background: var(--light);
+        }
+        
+        .comparison-table {
+            max-width: 1000px;
+            margin: 60px auto 0;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .comparison-row.header {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        .comparison-cell {
+            padding: 25px 20px;
+            font-size: 15px;
+        }
+        
+        .comparison-row.header .comparison-cell {
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .comparison-cell:not(:last-child) {
+            border-right: 1px solid var(--border);
+        }
+        
+        .check {
+            color: var(--success);
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .cross {
+            color: var(--error);
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        /* USP Section */
+        .usp-section {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .usp-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .usp-title {
+            font-size: clamp(32px, 4vw, 48px);
+            margin-bottom: 30px;
+            color: var(--white);
+        }
+        
+        .usp-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .usp-feature {
+            background: rgba(255,255,255,0.15);
+            padding: 30px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .usp-feature h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        /* Programs Section */
+        .programs-section {
+            padding: 100px 20px;
+            background: var(--white);
+        }
+        
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+        
+        .program-card {
+            background: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        .program-header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .program-header.featured {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+        }
+        
+        .program-name {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .program-price {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .program-duration {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .program-body {
+            padding: 40px 30px;
+        }
+        
+        .program-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .program-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 15px;
+        }
+        
+        .program-features li:before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        
+        .program-cta {
+            display: block;
+            text-align: center;
+            padding: 18px;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .program-cta:hover {
+            background: var(--accent);
+        }
+        
+        .program-card.featured .program-cta {
+            background: var(--accent);
+        }
+        
+        .program-card.featured .program-cta:hover {
+            background: var(--accent-dark);
+        }
+        
+        /* Contact Form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: 4px;
+            font-size: 15px;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(212,165,116,0.1);
+        }
+        
+        .form-input::placeholder {
+            color: var(--text-light);
+        }
+        
+        .submit-button {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .submit-button:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .submit-button:active {
+            transform: translateY(0);
+        }
+        
+        .program-card.featured .submit-button {
+            background: var(--accent);
+        }
+        
+        .program-card.featured .submit-button:hover {
+            background: var(--accent-dark);
+        }
+        
+        .form-message {
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: center;
+            display: none;
+        }
+        
+        .form-message.success {
+            background: rgba(45,106,79,0.1);
+            color: var(--success);
+            border: 1px solid var(--success);
+            display: block;
+        }
+        
+        .form-message.error {
+            background: rgba(200,75,49,0.1);
+            color: var(--error);
+            border: 1px solid var(--error);
+            display: block;
+        }
+        
+        .contact-form {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid var(--border);
+        }
+        
+        .form-privacy {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 15px;
+            text-align: center;
+            line-height: 1.5;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 20px;
+            background: var(--light);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+        
+        .testimonial-placeholder {
+            background: var(--white);
+            padding: 50px 40px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-placeholder h3 {
+            font-size: 20px;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-placeholder p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+        
+        /* Mentor Section */
+        .mentor-section {
+            padding: 100px 20px;
+            background: var(--white);
+        }
+        
+        .mentor-content {
+            max-width: 1000px;
+            margin: 60px auto 0;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .mentor-image-placeholder {
+            background: var(--light);
+            border: 2px dashed var(--border);
+            aspect-ratio: 3/4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .mentor-image-placeholder h3 {
+            font-size: 20px;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .mentor-bio h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .mentor-bio ul {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .mentor-bio li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 16px;
+        }
+        
+        .mentor-bio li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 20px;
+            background: var(--light);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+        
+        .faq-item {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d2d2d 100%);
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .final-cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .final-cta h2 {
+            font-size: clamp(36px, 5vw, 54px);
+            margin-bottom: 30px;
+            color: var(--white);
+        }
+        
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-primary {
+            display: inline-block;
+            padding: 20px 50px;
+            background: var(--accent);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+        }
+        
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 50px;
+            background: #25D366;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-button:hover {
+            background: #1fb855;
+            transform: translateY(-2px);
+        }
+        
+        /* Guarantee Section */
+        .guarantee-section {
+            background: var(--accent);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .guarantee-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .guarantee-content h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .comparison-row {
+                grid-template-columns: 1.5fr 1fr 1fr;
+            }
+            
+            .comparison-cell {
+                padding: 15px 10px;
+                font-size: 13px;
+            }
+            
+            .mentor-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .programs-grid,
+            .testimonial-grid,
+            .pain-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content animate-in">
+            <div class="hero-eyebrow">Antrenor Personal Certificat</div>
+            <h1>Transformă-ți Corpul în 90 de Zile<br>Fără Diete Extreme</h1>
+            <p class="hero-subtitle">Antrenamente și alimentație personalizate pentru femei ocupate care vor rezultate reale, nu doar să „se miște"</p>
+            <a href="#programs" class="hero-cta">Descoperă Programele</a>
+        </div>
+    </section>
+
+    <!-- PAIN POINTS SECTION -->
+    <section class="pain-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Te regăsești aici?</div>
+                <h2 class="section-title">Ai încercat deja totul și tot aici ai ajuns</h2>
+                <p class="section-subtitle">Știu exact prin ce treci pentru că am văzut aceste frustrări la sute de femei înainte să ajungă la mine.</p>
+            </div>
+            
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <h3>„Am plătit din nou pe un program care nu funcționează"</h3>
+                    <p>700-1100 RON pe programe copy-paste care promit personalizare, dar primești aceleași mese și exerciții ca toată lumea. Antrenorul nici măcar nu te-a întrebat despre durerile tale de spate sau probleme digestive.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <h3>„Mă doare când mă antrenez"</h3>
+                    <p>Dureri articulare, probleme de spate, disconfort ovarian - dar când spui antrenorului, răspunsul e „încearcă mai tare". Ai plâns după antrenament, nu de oboseală, ci de frustrare.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <h3>„Nu am timp pentru sală și antrenamente complicate"</h3>
+                    <p>Program încărcat, copii, responsabilități - îți trebuie ceva eficient acasă, nu rutine de 2 ore sau deplasări zilnice la sală.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <h3>„Sunt blocată în aceeași formă fizică"</h3>
+                    <p>Ai încercat Caroline Girvan - prea intense. Ai încercat programe scumpe - fără rezultate. Văzi fete pe Instagram cu corpuri perfecte și te întrebi ce faci greșit.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <h3>„Mă simt singură în toată lupta asta"</h3>
+                    <p>Antrenezi acasă, fără suport, fără cui să-i ceri sfaturi când ai nevoie. Prietenele te văd ca pe cineva care „încearcă mereu ceva nou" dar nu termină niciodată.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <h3>„Gastrita mă limitează la fiecare dietă"</h3>
+                    <p>Planuri de masă generice care nu țin cont de problemele tale digestive. Nimeni nu adaptează alimentația pentru tine - trebuie să te descurci singură.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORY SECTION -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <div class="section-header">
+                    <div class="section-eyebrow">Realitatea dureroasă</div>
+                    <h2 class="section-title">Cum sună conversația cu prietena ta</h2>
+                </div>
+                
+                <div class="story-quote">
+                    „Sunt atât de frustrată! Am plătit din nou 800 de lei pe un program de fitness care promitea rezultate personalizate, dar ghici ce? Aceleași mese ca toată lumea, aceleași exerciții generice. Antrenorul nici măcar nu m-a întrebat despre durerile mele de spate sau gastrită. Și când i-am spus că mă dor genunchii la genuflexiuni, mi-a zis doar să 'încerc mai tare'. Am plâns aseară după antrenament, nu de oboseală, ci de frustrare. Văd aceste fete pe Instagram cu corpuri perfecte și mă întreb ce fac eu greșit. Simt că arunc bani și timp pe fereastră și tot unde am început rămân."
+                </div>
+                
+                <p style="font-size: 18px; color: var(--text); margin-top: 40px;">
+                    Dacă acesta este monologul interior sau conversația ta cu prietena, știu exact ce simți. Pentru că am lucrat cu peste 200 de femei care au trecut prin același lucru înainte să ajungă la mine.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSFORMATIONS SECTION -->
+    <section class="transformation-section">
+        <div class="container">
+            <div class="transformation-header">
+                <div class="section-eyebrow" style="color: var(--accent);">Rezultate Reale</div>
+                <h2 class="section-title">Transformări în 90 de Zile</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Slăbire sănătoasă, tonifiere și abdomen definit - fără diete drastice sau antrenamente care te distrug</p>
+            </div>
+            
+            <!-- PLACEHOLDER: Adaugă aici galerie before/after -->
+            <div class="transformation-placeholder">
+                <h3>📸 ADAUGĂ AICI: Before/After Photos</h3>
+                <p>Galerie cu transformările reale ale clientelor tale din 90 de zile</p>
+                <p style="margin-top: 10px; font-size: 14px;">Recomandare: 6-9 imagini before/after, format grid 3x3 sau slider</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFFERENTIATION SECTION -->
+    <section class="diff-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Diferența clară</div>
+                <h2 class="section-title">De ce programele anterioare nu au funcționat</h2>
+                <p class="section-subtitle">Să comparăm ce primești de fapt când investești în transformarea ta</p>
+            </div>
+            
+            <div class="comparison-table">
+                <div class="comparison-row header">
+                    <div class="comparison-cell">Caracteristică</div>
+                    <div class="comparison-cell">Competiția (600-825 EUR)</div>
+                    <div class="comparison-cell">Bela Irina</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Personalizare reală</strong></div>
+                    <div class="comparison-cell"><span class="cross">✗</span> Copy-paste pentru toți</div>
+                    <div class="comparison-cell"><span class="check">✓</span> Adaptat 100% la tine</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Adaptare pentru dureri</strong></div>
+                    <div class="comparison-cell"><span class="cross">✗</span> „Încearcă mai tare"</div>
+                    <div class="comparison-cell"><span class="check">✓</span> Exerciții modificate</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Nutriție pentru gastrită</strong></div>
+                    <div class="comparison-cell"><span class="cross">✗</span> Planuri generice</div>
+                    <div class="comparison-cell"><span class="check">✓</span> Adaptat problemelor digestive</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Monitorizare continuă</strong></div>
+                    <div class="comparison-cell"><span class="cross">✗</span> Plătești și ești lăsată singură</div>
+                    <div class="comparison-cell"><span class="check">✓</span> Ajustări săptămânale</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Expertiza antrenor</strong></div>
+                    <div class="comparison-cell"><span class="cross">✗</span> Certificări de weekend</div>
+                    <div class="comparison-cell"><span class="check">✓</span> Certificare internațională</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Suport comunitar</strong></div>
+                    <div class="comparison-cell"><span class="cross">✗</span> Izolare totală</div>
+                    <div class="comparison-cell"><span class="check">✓</span> Acces WhatsApp</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Timeline realist</strong></div>
+                    <div class="comparison-cell"><span class="cross">✗</span> Promisiuni false „3 săptămâni"</div>
+                    <div class="comparison-cell"><span class="check">✓</span> Transformare reală 90 zile</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Potrivit pentru program încărcat</strong></div>
+                    <div class="comparison-cell"><span class="cross">✗</span> Antrenamente 2 ore sau deplasări</div>
+                    <div class="comparison-cell"><span class="check">✓</span> Acasă, 30-45 min</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>Preț</strong></div>
+                    <div class="comparison-cell">600-825 EUR (3000-4100 RON)</div>
+                    <div class="comparison-cell">300-1500 RON</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP SECTION -->
+    <section class="usp-section">
+        <div class="container">
+            <div class="usp-content">
+                <h2 class="usp-title">Ce face programul meu diferit de tot ce ai încercat până acum</h2>
+                <p style="font-size: 20px; margin-bottom: 20px;">Nu mai cheltui bani pe promisiuni goale. Aici primești un sistem complet care funcționează.</p>
+                
+                <div class="usp-features">
+                    <div class="usp-feature">
+                        <h3>Fără Dureri</h3>
+                        <p>Exerciții adaptate pentru spate, articulații și limitări fizice. Nu mai plângi după antrenamente.</p>
+                    </div>
+                    
+                    <div class="usp-feature">
+                        <h3>Fără Disconfort Digestiv</h3>
+                        <p>Planuri nutriționale create special pentru gastrită și probleme digestive. Mănânci sănătos fără să suferi.</p>
+                    </div>
+                    
+                    <div class="usp-feature">
+                        <h3>Monitorizare Reală</h3>
+                        <p>Ajustări săptămânale bazate pe progresul tău. Nu ești lăsată singură după ce plătești.</p>
+                    </div>
+                    
+                    <div class="usp-feature">
+                        <h3>Rezultate în 90 de Zile</h3>
+                        <p>Timeline realist pentru transformare vizibilă și sustenabilă. Fără promisiuni false de „3 săptămâni".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS SECTION -->
+    <section class="programs-section" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Programele Mele</div>
+                <h2 class="section-title">Alege Programul Potrivit Pentru Tine</h2>
+                <p class="section-subtitle">Fiecare program este personalizat 100% pentru obiectivele și limitările tale</p>
+            </div>
+            
+            <div class="programs-grid">
+                <!-- Program 1: Online Abdomen -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3 class="program-name">Abdomen Sculptat</h3>
+                        <div class="program-price">150 lei</div>
+                        <div class="program-duration">pe lună (minim 6 luni)</div>
+                    </div>
+                    <div class="program-body">
+                        <ul class="program-features">
+                            <li>Plan de antrenament personalizat</li>
+                            <li>Plan alimentar adaptat obiectivului</li>
+                            <li>Ghid clar pentru definirea abdomenului</li>
+                            <li>Fără diete extreme</li>
+                            <li>Antrenamente acasă</li>
+                        </ul>
+                        <div class="contact-form">
+                            <form class="program-form" data-program="Abdomen Sculptat">
+                                <div class="form-group">
+                                    <label for="phone-abdomen">Număr de telefon *</label>
+                                    <input type="tel" id="phone-abdomen" name="phone" class="form-input" placeholder="07XX XXX XXX" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email-abdomen">Email *</label>
+                                    <input type="email" id="email-abdomen" name="email" class="form-input" placeholder="exemplu@email.com" required>
+                                </div>
+                                <button type="submit" class="submit-button">Vreau Acest Program</button>
+                                <div class="form-message"></div>
+                                <p class="form-privacy">Datele tale sunt în siguranță. Te vom contacta în maxim 24h.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 2: Online Complete - FEATURED -->
+                <div class="program-card featured">
+                    <div class="program-header featured">
+                        <h3 class="program-name">Antrenament + Alimentație</h3>
+                        <div class="program-price">300 lei</div>
+                        <div class="program-duration">pe lună (minim 6 luni)</div>
+                    </div>
+                    <div class="program-body">
+                        <ul class="program-features">
+                            <li>Evaluare inițială completă</li>
+                            <li>Plan de antrenament personalizat</li>
+                            <li>Plan alimentar personalizat</li>
+                            <li>Ajustări săptămânale</li>
+                            <li>Suport WhatsApp</li>
+                            <li>Monitorizare progres continuă</li>
+                            <li>Adaptat pentru dureri și limitări</li>
+                            <li>Alimentație pentru gastrită</li>
+                        </ul>
+                        <div class="contact-form">
+                            <form class="program-form" data-program="Antrenament + Alimentație">
+                                <div class="form-group">
+                                    <label for="phone-complete">Număr de telefon *</label>
+                                    <input type="tel" id="phone-complete" name="phone" class="form-input" placeholder="07XX XXX XXX" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email-complete">Email *</label>
+                                    <input type="email" id="email-complete" name="email" class="form-input" placeholder="exemplu@email.com" required>
+                                </div>
+                                <button type="submit" class="submit-button">CEL MAI POPULAR - Vreau Access</button>
+                                <div class="form-message"></div>
+                                <p class="form-privacy">Datele tale sunt în siguranță. Te vom contacta în maxim 24h.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 3: Transformare 90 zile -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3 class="program-name">Transformare Totală</h3>
+                        <div class="program-price">Personalizat</div>
+                        <div class="program-duration">90 de zile (online sau 1:1)</div>
+                    </div>
+                    <div class="program-body">
+                        <ul class="program-features">
+                            <li>Program complet personalizat</li>
+                            <li>Rezultate vizibile și susținute</li>
+                            <li>Nu este un program de „încercat"</li>
+                            <li>Este pentru schimbare reală</li>
+                            <li>Slăbire, tonifiere, abdomen definit</li>
+                            <li>Fără diete extreme sau efect yo-yo</li>
+                        </ul>
+                        <div class="contact-form">
+                            <form class="program-form" data-program="Transformare Totală">
+                                <div class="form-group">
+                                    <label for="phone-transformare">Număr de telefon *</label>
+                                    <input type="tel" id="phone-transformare" name="phone" class="form-input" placeholder="07XX XXX XXX" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email-transformare">Email *</label>
+                                    <input type="email" id="email-transformare" name="email" class="form-input" placeholder="exemplu@email.com" required>
+                                </div>
+                                <button type="submit" class="submit-button">Vreau Transformare Reală</button>
+                                <div class="form-message"></div>
+                                <p class="form-privacy">Datele tale sunt în siguranță. Te vom contacta în maxim 24h.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 4: 1:1 în sală - 90 zile -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3 class="program-name">1:1 în Sală - 90 Zile</h3>
+                        <div class="program-price">1500 lei</div>
+                        <div class="program-duration">3 luni complete</div>
+                    </div>
+                    <div class="program-body">
+                        <ul class="program-features">
+                            <li>Antrenamente individuale personalizate</li>
+                            <li>Plan alimentar adaptat obiectivului</li>
+                            <li>Corectarea execuției la fiecare ședință</li>
+                            <li>Monitorizare progres</li>
+                            <li>Ajustări constante</li>
+                            <li>Rezultate reale, nu doar transpirație</li>
+                            <li>Atenție 100% pe tine</li>
+                        </ul>
+                        <div class="contact-form">
+                            <form class="program-form" data-program="1:1 în Sală - 90 Zile">
+                                <div class="form-group">
+                                    <label for="phone-sala">Număr de telefon *</label>
+                                    <input type="tel" id="phone-sala" name="phone" class="form-input" placeholder="07XX XXX XXX" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email-sala">Email *</label>
+                                    <input type="email" id="email-sala" name="email" class="form-input" placeholder="exemplu@email.com" required>
+                                </div>
+                                <button type="submit" class="submit-button">Locuri Limitate - Vreau Access</button>
+                                <div class="form-message"></div>
+                                <p class="form-privacy">Datele tale sunt în siguranță. Te vom contacta în maxim 24h.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 5: 1:1 lunar -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3 class="program-name">Antrenament 1:1</h3>
+                        <div class="program-price">600 lei</div>
+                        <div class="program-duration">pe lună</div>
+                    </div>
+                    <div class="program-body">
+                        <ul class="program-features">
+                            <li>Antrenamente individuale</li>
+                            <li>Atenție 100% pe tine</li>
+                            <li>Corectare postură și execuție</li>
+                            <li>Motivație, disciplină și structură</li>
+                            <li>Doar după evaluare inițială</li>
+                        </ul>
+                        <div class="contact-form">
+                            <form class="program-form" data-program="Antrenament 1:1 Lunar">
+                                <div class="form-group">
+                                    <label for="phone-monthly">Număr de telefon *</label>
+                                    <input type="tel" id="phone-monthly" name="phone" class="form-input" placeholder="07XX XXX XXX" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email-monthly">Email *</label>
+                                    <input type="email" id="email-monthly" name="email" class="form-input" placeholder="exemplu@email.com" required>
+                                </div>
+                                <button type="submit" class="submit-button">Evaluare Gratuită</button>
+                                <div class="form-message"></div>
+                                <p class="form-privacy">Datele tale sunt în siguranță. Te vom contacta în maxim 24h.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 60px; padding: 40px; background: var(--light); border-left: 6px solid var(--accent);">
+                <h3 style="font-size: 28px; margin-bottom: 20px; color: var(--primary);">⚠️ IMPORTANT: Nu este pentru oricine</h3>
+                <p style="font-size: 18px; color: var(--text);">
+                    Dacă vrei doar un antrenor care să numere repetări, există opțiuni mai ieftine. Aici lucrăm personalizat și orientat pe rezultate. Este pentru femeile care vor rezultate reale și sunt gata să se implice.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Ce spun clientele mele</div>
+                <h2 class="section-title">Peste 200 de Femei Antrenate</h2>
+                <p class="section-subtitle">Transformări reale, nu promisiuni goale</p>
+            </div>
+            
+            <!-- PLACEHOLDER: Adaugă testimoniale reale -->
+            <div class="testimonial-grid">
+                <div class="testimonial-placeholder">
+                    <h3>📝 ADAUGĂ AICI: Testimonial #1</h3>
+                    <p>Citat real de la o clientă despre cum a rezolvat problemele de dureri la antrenament + rezultatele obținute în 90 de zile</p>
+                    <p style="margin-top: 15px; font-size: 14px;">Include: Nume, Vârstă, Rezultate (ex: -8kg, abdomen definit)</p>
+                </div>
+                
+                <div class="testimonial-placeholder">
+                    <h3>📝 ADAUGĂ AICI: Testimonial #2</h3>
+                    <p>Citat real de la o clientă despre alimentația adaptată pentru gastrită + cum s-a simțit susținută în comunitate</p>
+                    <p style="margin-top: 15px; font-size: 14px;">Include: Nume, Vârstă, Rezultate</p>
+                </div>
+                
+                <div class="testimonial-placeholder">
+                    <h3>📝 ADAUGĂ AICI: Testimonial #3</h3>
+                    <p>Citat real de la o clientă mamă ocupată despre cum a reușit să se antreneze acasă în 30-45 min și să vadă rezultate</p>
+                    <p style="margin-top: 15px; font-size: 14px;">Include: Nume, Vârstă, Rezultate</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-placeholder" style="margin-top: 40px;">
+                <h3>⭐ ADAUGĂ AICI: Review-uri și Rating</h3>
+                <p>Screenshots de pe Google Reviews, Facebook, Instagram sau alte platforme</p>
+                <p style="margin-top: 10px; font-size: 14px;">Recomandare: Rating mediu + număr total review-uri + 3-5 review-uri detaliate</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTOR SECTION -->
+    <section class="mentor-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Despre mine</div>
+                <h2 class="section-title">De ce să lucrezi cu mine</h2>
+            </div>
+            
+            <div class="mentor-content">
+                <div class="mentor-image-placeholder">
+                    <h3>📸 ADAUGĂ AICI</h3>
+                    <p>Poză profesională Bela Irina</p>
+                    <p style="margin-top: 10px; font-size: 14px;">Format portret 3:4</p>
+                </div>
+                
+                <div class="mentor-bio">
+                    <h3>Bela Irina</h3>
+                    <p style="font-size: 18px; color: var(--text-light); margin-bottom: 30px;">
+                        Antrenor personal certificat internațional, specializat în transformări feminine sustenabile. Am antrenat peste 200 de femei și știu exact ce funcționează - și mai important, ce NU funcționează.
+                    </p>
+                    
+                    <ul>
+                        <li>Certificare internațională antrenor personal</li>
+                        <li>Peste 200 de femei antrenate cu succes</li>
+                        <li>Specializare în adaptări pentru dureri și limitări fizice</li>
+                        <li>Expertă în nutriție adaptată pentru probleme digestive</li>
+                        <li>Focus pe rezultate reale, nu doar aparențe</li>
+                        <li>Fără diete extreme sau antrenamente nesustenabile</li>
+                        <li>Abordare personalizată 100% pentru fiecare clientă</li>
+                    </ul>
+                    
+                    <p style="font-size: 16px; color: var(--text); margin-top: 30px; font-style: italic;">
+                        „Nu lucrez cu oricine. Lucrez doar cu femei care vor schimbare reală și sunt gata să se implice. Dacă ești pregătită pentru transformare, sunt aici pentru tine."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Întrebări frecvente</div>
+                <h2 class="section-title">Tot ce trebuie să știi</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Cât timp durează până văd rezultate?</div>
+                    <div class="faq-answer">
+                        Primele rezultate vizibile apar în 3-4 săptămâni (energie crescută, îmbrăcăminte mai lejeră). Transformarea vizibilă completă necesită 90 de zile de consistență. Nu promit minuni în 3 săptămâni - promit rezultate reale și sustenabile în 3 luni.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Pot să urmez programul dacă am dureri de spate/articulații?</div>
+                    <div class="faq-answer">
+                        Absolut DA. Tocmai de aceea programele mele sunt diferite - adaptez exercițiile în funcție de limitările tale fizice. Nu vei auzi niciodată „încearcă mai tare" când raportezi durere. Vom găsi exerciții alternative care lucrează aceleași grupe musculare fără să-ți provoace disconfort.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Am gastrită - pot urma planul alimentar?</div>
+                    <div class="faq-answer">
+                        Da! Planurile mele nutriționale sunt adaptate problemelor digestive. Îmi vei spune despre gastrită și alte probleme digestive la evaluarea inițială, iar planul tău va fi creat ținând cont de acestea. Nu vei primi un plan generic care te face să suferi.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Cât timp durează antrenamentele?</div>
+                    <div class="faq-answer">
+                        30-45 de minute, 3-4 ori pe săptămână. Programele sunt create pentru femei ocupate - eficiente, nu lungi. Poți să te antrenezi acasă, fără echipament special sau deplasări la sală.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Care este diferența dintre programele tale și cele de 600-825 EUR?</div>
+                    <div class="faq-answer">
+                        Personalizare REALĂ. Competiția îți dă același program ca tuturor celorlalți, ignoră problemele tale de sănătate și te lasă singură după ce plătești. Eu îți creez un program adaptat 100% ție, cu ajustări săptămânale și suport constant. Plus, prețuri accesibile - nu trebuie să plătești 4000 RON pentru rezultate reale.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Trebuie să renunț la tot ce îmi place să mănânc?</div>
+                    <div class="faq-answer">
+                        NU. Fără diete extreme sau înfometare. Vei mânca sănătos, echilibrat și adaptat problemelor tale digestive - dar nu vei simți că ești la „regim". Sustenabilitate, nu tortură.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Cum funcționează ajustările săptămânale?</div>
+                    <div class="faq-answer">
+                        Îmi trimiți progresul săptămânal (poze, măsurători, feedback despre cum te simți). Eu analizez progresul și ajustez antrenamentele și alimentația în funcție de rezultate. Nu primești un plan fix și „mult noroc" - programul evoluează cu tine.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Ce echipament am nevoie?</div>
+                    <div class="faq-answer">
+                        Minim: greutăți simple și benzi elastice pentru acasă. Poți începe chiar și fără echipament - voi adapta programul în funcție de ce ai disponibil. Nu trebuie să investești în echipament scump.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE SECTION -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-content">
+                <h3>Locuri Limitate pentru Colaborări Lunare Online</h3>
+                <p style="font-size: 18px; margin-top: 20px;">
+                    Lucrez cu un număr limitat de cliente pentru a putea oferi atenție 100% personalizată și rezultate garantate. Nu accept pe oricine - doar pe femeile care sunt gata pentru schimbare reală.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Gata să începi transformarea ta?</h2>
+                <p>Evaluare GRATUITĂ și detalii complete despre program</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://wa.me/40748928734" class="whatsapp-button" target="_blank">
+                        📱 Scrie-mi pe WhatsApp
+                    </a>
+                </div>
+                
+                <p style="font-size: 16px; margin-top: 40px; opacity: 0.9;">
+                    📞 Sau sună direct: <strong>0748 928 734</strong>
+                </p>
+                
+                <p style="font-size: 18px; margin-top: 40px; font-weight: 600;">
+                    Nu este un program pentru oricine. Este pentru femeile care vor rezultate reale și sunt gata să se implice.
+                </p>
+                
+                <p style="font-size: 16px; margin-top: 20px; font-style: italic;">
+                    De multe ori, o simplă discuție este suficientă ca să te motiveze și să te pună pe drumul corect.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Bela Irina - Antrenor Personal Certificat | Toate drepturile rezervate</p>
+            <p style="margin-top: 10px;">📱 0748 928 734 | 📧 Contact prin WhatsApp</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const forms = document.querySelectorAll('.program-form');
+            
+            forms.forEach(form => {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const submitButton = this.querySelector('.submit-button');
+                    const messageDiv = this.querySelector('.form-message');
+                    const programName = this.getAttribute('data-program');
+                    
+                    // Get form data
+                    const formData = {
+                        program: programName,
+                        phone: this.querySelector('input[name="phone"]').value,
+                        email: this.querySelector('input[name="email"]').value,
+                        timestamp: new Date().toISOString()
+                    };
+                    
+                    // Disable button
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Se trimite...';
+                    
+                    // Hide previous messages
+                    messageDiv.classList.remove('success', 'error');
+                    messageDiv.style.display = 'none';
+                    
+                    try {
+                        // IMPORTANT: Înlocuiește acest URL cu endpoint-ul tău real
+                        // Poți folosi Google Forms, Make.com, Zapier, sau propriul tău server
+                        
+                        // Exemplu cu Google Forms (trebuie să configurezi)
+                        // const response = await fetch('YOUR_GOOGLE_FORM_URL', {
+                        //     method: 'POST',
+                        //     body: new FormData(this)
+                        // });
+                        
+                        // Exemplu cu webhook Make.com/Zapier
+                        // const response = await fetch('YOUR_WEBHOOK_URL', {
+                        //     method: 'POST',
+                        //     headers: {
+                        //         'Content-Type': 'application/json',
+                        //     },
+                        //     body: JSON.stringify(formData)
+                        // });
+                        
+                        // TEMPORARY: Simulare success (înlocuiește cu cod real mai sus)
+                        await new Promise(resolve => setTimeout(resolve, 1000));
+                        
+                        // Salvare în localStorage (backup)
+                        const leads = JSON.parse(localStorage.getItem('fitness_leads') || '[]');
+                        leads.push(formData);
+                        localStorage.setItem('fitness_leads', JSON.stringify(leads));
+                        
+                        // Success message
+                        messageDiv.classList.add('success');
+                        messageDiv.textContent = '✓ Mulțumesc! Vei fi contactată în maxim 24h.';
+                        messageDiv.style.display = 'block';
+                        
+                        // Reset form
+                        this.reset();
+                        
+                        // Optional: Redirect către WhatsApp după 2 secunde
+                        setTimeout(() => {
+                            const message = `Bună! Sunt interesată de programul "${programName}". Am completat formularul cu datele mele.`;
+                            const whatsappURL = `https://wa.me/40748928734?text=${encodeURIComponent(message)}`;
+                            window.open(whatsappURL, '_blank');
+                        }, 2000);
+                        
+                    } catch (error) {
+                        // Error message
+                        messageDiv.classList.add('error');
+                        messageDiv.textContent = '✗ A apărut o eroare. Te rugăm să încerci din nou sau contactează direct pe WhatsApp.';
+                        messageDiv.style.display = 'block';
+                        
+                        console.error('Form submission error:', error);
+                    } finally {
+                        // Re-enable button
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Trimite Cererea';
+                    }
+                });
+            });
+            
+            // Phone number formatting
+            const phoneInputs = document.querySelectorAll('input[type="tel"]');
+            phoneInputs.forEach(input => {
+                input.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 10) {
+                        value = value.slice(0, 10);
+                    }
+                    e.target.value = value;
+                });
+            });
+        });
+        
+        // Smooth scroll pentru CTA links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
